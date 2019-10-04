@@ -1,0 +1,42 @@
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    <!-- small cluster memory settings -->
+    <!-- Default 1024. Recommend setting to 4096. Should not be higher than YARN max allocation -->
+    <property>
+      <name>mapreduce.map.memory.mb</name>
+      <value>256</value>
+    </property>
+    
+    <!-- Default 1024. Recommend setting to 4096. Should not be higher than YARN max allocation -->
+    <property>
+      <name>mapreduce.reduce.memory.mb</name>
+      <value>256</value>
+    </property>
+    
+    <!-- Default 1536. Recommend 1024 -->
+    <property>
+      <description>Application master allocation</description>
+      <name>yarn.app.mapreduce.am.resource.mb</name>
+      <value>256</value>
+    </property>
+    
+    <!-- Recommend heapsizes to be 75% of mapreduce.map/reduce.memory.mb -->
+    <property>
+      <name>mapreduce.map.java.opts</name>
+      <value>-Xmx192m</value>
+    </property>
+    
+    <property>
+      <name>mapreduce.reduce.java.opts</name>
+      <value>-Xmx192m</value>
+    </property> 
+    
+    <property>
+      <description>Application Master JVM opts</description>
+      <name>yarn.app.mapreduce.am.command-opts</name>
+      <value>-Xmx192m</value>
+    </property>
+</configuration>
