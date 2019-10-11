@@ -76,9 +76,9 @@ sudo $KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper namenode:2181 --replic
 
 $KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper namenode:2181 --replication-factor 1 --partitions 3 --topic msgtopic
 
-$KAFKA_HOME/bin/kafka-console-producer.sh --create --broker-list namenode:9092 --topic msgtopic
+$KAFKA_HOME/bin/kafka-console-producer.sh --broker-list namenode:9092 --topic msgtopic
 
-$KAFKA_HOME/bin/kafka-console-consumer.sh –bootstrap-server namenode:9092 --topic msgtopic --from-beginning
+$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server namenode:9092 --topic msgtopic --from-beginning
 ```
 
 ### Known issues
