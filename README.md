@@ -115,8 +115,8 @@ Similar to Linux, but it starts with “hadoop fs” or “hdfs dfs (currently u
 Different systems
 HDFS, Local FS, WebHDFS, S3 FS, and others
 ```hdfs dfs - <command> [arguments]```
-HDFS system
-Ex.
+
+HDFS system Ex.
 ```
 $HADOOP_HOME/bin/hadoop fs -help
 $HADOOP_HOME/bin/hdfs dfs -help
@@ -130,9 +130,9 @@ $HADOOP_HOME/bin/hdfs dfs -help ls
 * Removal
 ```$HADOOP_HOME/bin/hdfs dfs rm <src>```
   
-Arguments
--r: Delete Directory
--skipTrash: Permanently Remove
+** Arguments 
+*** -r: Delete Directory 
+*** -skipTrash: Permanently Remove
 
 * Empty the trash
 ```$HADOOP_HOME/bin/hdfs dfs expunge```
@@ -144,7 +144,4 @@ Recursive: -R
 
 * View file contents
 ```$HADOOP_HOME/bin/hdfs dfs cat <file>```
-  
-* SequenceIQ - [https://github.com/sequenceiq](https://github.com/sequenceiq)
-* Luciano Resende - [https://github.com/lresende](https://github.com/lresende)
-# dcruz-hadoop-cluster
+
