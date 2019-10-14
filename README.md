@@ -122,9 +122,29 @@ $HADOOP_HOME/bin/hadoop fs -help
 $HADOOP_HOME/bin/hdfs dfs -help
 
 $ export PATH = $PATH:/usr/local/hadoop/sbin/:/usr/local/hadoop/bin/
-$HADOOP_HOME/hdfs dfs -help ls
+$HADOOP_HOME/bin/hdfs dfs -help ls
 ```
-# Credits
+* Create directory
+```$HADOOP_HOME/bin/hdfs dfs mkdir <directory>```
+
+* Removal
+```$HADOOP_HOME/bin/hdfs dfs rm <src>```
+  
+Arguments
+-r: Delete Directory
+-skipTrash: Permanently Remove
+
+* Empty the trash
+```$HADOOP_HOME/bin/hdfs dfs expunge```
+
+* List directory
+```$HADOOP_HOME/bin/hdfs dfs ls <directory>```
+  
+Recursive: -R
+
+* View file contents
+```$HADOOP_HOME/bin/hdfs dfs cat <file>```
+  
 * SequenceIQ - [https://github.com/sequenceiq](https://github.com/sequenceiq)
 * Luciano Resende - [https://github.com/lresende](https://github.com/lresende)
 # dcruz-hadoop-cluster
