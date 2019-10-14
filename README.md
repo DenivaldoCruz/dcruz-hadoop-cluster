@@ -88,22 +88,23 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server namenode:9092 --top
 
 # Main commands
 ## HDFS
-To start Hadoop you must prepare (format) the machine to receive the data.
+### Inicialização do Hadoop
+*To start Hadoop you must prepare (format) the machine to receive the data. 
 ```$ bin / hadoop namenode -format```
 
-Start NameNode daemon and DataNode daemon:
-$ sbin / start-dfs.sh
+* Start NameNode daemon and DataNode daemon:
+```$ sbin / start-dfs.sh```
 NameNode - http: // localhost: 50070 /
 
-Start the ResourceManager daemon and the NodeManager daemon:
-$ sbin / start-yarn.sh
+* Start the ResourceManager daemon and the NodeManager daemon:
+```$ sbin / start-yarn.sh```
 ResourceManager - http: // localhost: 8088 /
 
-list JVM processes
-$ jps
+* list JVM processes
+```$ jps```
 
-HDFS File System Verification
-$ hdfs fsck /
+* HDFS File System Verification
+```$ hdfs fsck /```
 
 # Credits
 * SequenceIQ - [https://github.com/sequenceiq](https://github.com/sequenceiq)
