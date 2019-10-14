@@ -90,15 +90,15 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server namenode:9092 --top
 ## HDFS
 ### Inicialização do Hadoop
 * To start Hadoop you must prepare (format) the machine to receive the data. 
-```$ bin / hadoop namenode -format```
+```$HADOOP_HOME/bin/hadoop namenode -format```
 
 * Start NameNode daemon and DataNode daemon:
-```$ sbin / start-dfs.sh```
+```$HADOOP_HOME/sbin/start-dfs.sh```
 
 NameNode - http: // localhost: 50070 /
 
 * Start the ResourceManager daemon and the NodeManager daemon:
-```$ sbin / start-yarn.sh```
+```$HADOOP_HOME/sbin/start-yarn.sh```
 
 ResourceManager - http: // localhost: 8088 /
 
@@ -106,7 +106,7 @@ ResourceManager - http: // localhost: 8088 /
 ```$ jps```
 
 * HDFS File System Verification
-```$ hdfs fsck /```
+```$HADOOP_HOME/hdfs fsck /```
 
 # Credits
 * SequenceIQ - [https://github.com/sequenceiq](https://github.com/sequenceiq)
