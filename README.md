@@ -106,8 +106,24 @@ ResourceManager - http: // localhost: 8088 /
 ```$ jps```
 
 * HDFS File System Verification
-```$HADOOP_HOME/hdfs fsck /```
+```$HADOOP_HOME/bin/hdfs fsck /```
 
+### Main commands
+Similar to Linux, but it starts with “hadoop fs” or “hdfs dfs (currently used)”
+```hadoop fs - <command> [arguments]```
+
+Different systems
+HDFS, Local FS, WebHDFS, S3 FS, and others
+```hdfs dfs - <command> [arguments]```
+HDFS system
+Ex.
+```
+$HADOOP_HOME/bin/hadoop fs -help
+$HADOOP_HOME/bin/hdfs dfs -help
+
+$ export PATH = $PATH:/usr/local/hadoop/sbin/:/usr/local/hadoop/bin/
+$HADOOP_HOME/hdfs dfs -help ls
+```
 # Credits
 * SequenceIQ - [https://github.com/sequenceiq](https://github.com/sequenceiq)
 * Luciano Resende - [https://github.com/lresende](https://github.com/lresende)
