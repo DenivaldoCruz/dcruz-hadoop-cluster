@@ -130,20 +130,36 @@ $HADOOP_HOME/bin/hdfs dfs -help ls
 * Removal
 ```
 $HADOOP_HOME/bin/hdfs dfs rm <src>
+
 Arguments 
 -r: Delete Directory 
 -skipTrash: Permanently Remove
-
 ```
   
 * Empty the trash
 ```$HADOOP_HOME/bin/hdfs dfs expunge```
 
 * List directory
-```$HADOOP_HOME/bin/hdfs dfs ls <directory>```
-  
+```
+$HADOOP_HOME/bin/hdfs dfs ls <directory>
+
 Recursive: -R
+```
 
 * View file contents
 ```$HADOOP_HOME/bin/hdfs dfs cat <file>```
 
+#### Send Local / HDFS
+
+Upload file or directory
+put <src> <dst> (most used)
+
+Arguments
+-p: Preserve attributes (access and modification times, ownership and permissions)
+-f: Override the destination if it already exists.
+-l: Forces a replication factor of 1
+-d: Ignore temporary file creation with suffix. <dst> ._COPYING_.
+copyFromLocal <src> <dst>
+Move file or directory
+Put that delete of the place
+moveFromLocal <src> <dst>
