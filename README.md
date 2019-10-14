@@ -86,18 +86,20 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server namenode:9092 --top
 * No proper PySpark setup
 * Unable to get Hive to work on Tez (current default MapReduce)
 
-# Main commands
+# Commands
 ## HDFS
 ### Inicialização do Hadoop
-*To start Hadoop you must prepare (format) the machine to receive the data. 
+* To start Hadoop you must prepare (format) the machine to receive the data. 
 ```$ bin / hadoop namenode -format```
 
 * Start NameNode daemon and DataNode daemon:
 ```$ sbin / start-dfs.sh```
+
 NameNode - http: // localhost: 50070 /
 
 * Start the ResourceManager daemon and the NodeManager daemon:
 ```$ sbin / start-yarn.sh```
+
 ResourceManager - http: // localhost: 8088 /
 
 * list JVM processes
