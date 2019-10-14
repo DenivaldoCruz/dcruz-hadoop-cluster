@@ -116,7 +116,7 @@ Different systems
 HDFS, Local FS, WebHDFS, S3 FS, and others
 ```hdfs dfs - <command> [arguments]```
 
-HDFS system Ex.
+#### HDFS system
 ```
 $HADOOP_HOME/bin/hadoop fs -help
 $HADOOP_HOME/bin/hdfs dfs -help
@@ -151,15 +151,23 @@ Recursive: -R
 
 #### Send Local / HDFS
 
-Upload file or directory
-put <src> <dst> (most used)
+* Upload file or directory
+
+```
+$HADOOP_HOME/bin/hdfs dfs put <src> <dst> (most used)
 
 Arguments
 -p: Preserve attributes (access and modification times, ownership and permissions)
 -f: Override the destination if it already exists.
 -l: Forces a replication factor of 1
 -d: Ignore temporary file creation with suffix. <dst> ._COPYING_.
-copyFromLocal <src> <dst>
-Move file or directory
-Put that delete of the place
-moveFromLocal <src> <dst>
+
+$HADOOP_HOME/bin/hdfs dfs copyFromLocal <src> <dst>
+```
+
+* Move file or directory
+
+Put that deletes of the place
+```
+$HADOOP_HOME/bin/hdfs dfs moveFromLocal <src> <dst>
+```
