@@ -80,10 +80,16 @@ $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list namenode:9092 --topic ms
 
 $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server namenode:9092 --topic msgtopic --from-beginning
 ```
-## Main commands
-### HDFS
+### Known issues
+* Spark application master is not reachable from host system
+* HBase and Kafka services do not start automatically sometimes (increasing memory of the container might solve this issue)
+* No proper PySpark setup
+* Unable to get Hive to work on Tez (current default MapReduce)
+
+# Main commands
+## HDFS
 To start Hadoop you must prepare (format) the machine to receive the data.
-$ bin / hadoop namenode -format
+```$ bin / hadoop namenode -format```
 
 Start NameNode daemon and DataNode daemon:
 $ sbin / start-dfs.sh
@@ -98,12 +104,6 @@ $ jps
 
 HDFS File System Verification
 $ hdfs fsck /
-
-### Known issues
-* Spark application master is not reachable from host system
-* HBase and Kafka services do not start automatically sometimes (increasing memory of the container might solve this issue)
-* No proper PySpark setup
-* Unable to get Hive to work on Tez (current default MapReduce)
 
 # Credits
 * SequenceIQ - [https://github.com/sequenceiq](https://github.com/sequenceiq)
