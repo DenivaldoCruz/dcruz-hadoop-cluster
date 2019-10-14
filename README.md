@@ -128,14 +128,14 @@ $HADOOP_HOME/bin/hdfs dfs -help ls
 ```$HADOOP_HOME/bin/hdfs dfs mkdir <directory>```
 
 * Removal
-```$HADOOP_HOME/bin/hdfs dfs rm <src>```
-  
+```
+$HADOOP_HOME/bin/hdfs dfs rm <src>
 Arguments 
-
 -r: Delete Directory 
-
 -skipTrash: Permanently Remove
 
+```
+  
 * Empty the trash
 ```$HADOOP_HOME/bin/hdfs dfs expunge```
 
